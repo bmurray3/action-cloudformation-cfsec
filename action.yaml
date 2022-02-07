@@ -1,0 +1,13 @@
+name: 'CloudFormation Security Scan'
+description: 'Run cfsec security tool'
+outputs: 
+  outcome:
+    description: 'Outcome of CF Sec scan'
+    value: ${{ steps.security.outcome }}
+runs:
+  using: "composite"
+  steps:
+    - name: CF Sec
+      id: security
+      shell: sh
+      run: python3 $GITHUB_ACTION_PATH/cfsec.py
