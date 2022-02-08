@@ -18,7 +18,7 @@ try:
   )
   print(output.stdout.decode("utf8"))
   write_file(output.stdout.decode("utf8"))
-except subprocess.subprocess.CalledProcessError as error:
+except subprocess.CalledProcessError as error:
   print(error.stdout.decode("utf8"))
   print(error.stderr.decode("utf8"))
   write_file(error.stdout.decode("utf8"))
