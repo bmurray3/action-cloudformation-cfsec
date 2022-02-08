@@ -10,7 +10,7 @@ def write_file(content):
 
 try:
   output = subprocess.run(
-    [f"cfsec --nocolor ."],
+    [f"cfsec --no-color ."],
     check=True,
     capture_output=True,
     text=False,
